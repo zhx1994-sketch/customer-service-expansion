@@ -1,0 +1,35 @@
+{
+    "name": "part-time-development_1/customer-service-expansion",
+    "alias": "",
+    "description": "Customer Service Extension for OwlAdmin",
+    "type": "library",
+    "version": "1.0.0",
+    "keywords": ["owl-admin", "extension", "customer-service"],
+    "homepage": "https://github.com/part-time-development_1/customer-service-expansion",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zhx",
+            "email": "929422833@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "slowlyo/owl-admin": "*",
+        "beyondcode/laravel-websockets": "^1.14",
+        "pusher/pusher-php-server": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "PartTimeDevelopment\\CustomerServiceExpansion\\": "src/"
+        }
+    },
+    "extra": {
+        "owl-admin": "PartTimeDevelopment\\CustomerServiceExpansion\\CustomerServiceExpansionServiceProvider",
+        "laravel": {
+            "providers": [
+                "PartTimeDevelopment\\CustomerServiceExpansion\\CustomerServiceExpansionServiceProvider"
+            ]
+        }
+    }
+}

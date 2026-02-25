@@ -1,0 +1,162 @@
+/* 客服工作台样式 */
+.customer-service-workbench {
+    height: 100vh;
+    background: #f5f7fa;
+}
+
+/* 统计卡片 */
+.stats-grid {
+    margin-bottom: 20px;
+}
+
+.stat-panel {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-left: 4px solid #e3e8f7;
+    transition: all 0.3s ease;
+}
+
+.stat-panel:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.stat-panel.total {
+    border-left-color: #6366f1;
+}
+
+.stat-panel.read {
+    border-left-color: #10b981;
+}
+
+.stat-panel.unread {
+    border-left-color: #ef4444;
+}
+
+.stat-panel.unread-messages {
+    border-left-color: #f59e0b;
+}
+
+.stat-panel.today {
+    border-left-color: #3b82f6;
+}
+
+.stat-content {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* 主要工作区域 */
+.workbench-main {
+    height: calc(100vh - 140px);
+    min-height: 600px;
+}
+
+/* 已读未读状态样式 */
+.read-status {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.read-status.read {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.read-status.unread {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.message-count {
+    background: #f3f4f6;
+    padding: 2px 6px;
+    border-radius: 8px;
+    font-size: 10px;
+    color: #6b7280;
+}
+
+/* 未读消息徽章优化 */
+.badge {
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    min-width: 18px;
+    text-align: center;
+}
+
+.badge-danger {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+}
+
+.badge-success {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+}
+
+/* 连接状态指示器 */
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.status-dot.connecting {
+    background: #f59e0b;
+    animation: pulse 1s infinite;
+}
+
+.status-dot.connected {
+    background: #10b981;
+}
+
+.status-dot.disconnected {
+    background: #ef4444;
+}
+
+.status-dot.error {
+    background: #ef4444;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .workbench-main {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+    
+    .stat-number {
+        font-size: 24px;
+    }
+}
